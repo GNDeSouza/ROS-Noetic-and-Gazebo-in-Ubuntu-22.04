@@ -69,12 +69,10 @@ sudo wget https://raw.githubusercontent.com/ros/rosdistro/master/rosdep/base.yam
 
 sudo vi base.yaml  #######    to look like this...
 
-########
-########hddtemp:
 
-########  arch: [hddtemp]
-  
-########  debian: [hddtemp]
+######hddtemp:
+######  arch: [hddtemp]  
+######  debian: [hddtemp]
   
   fedora: [hddtemp]
   
