@@ -70,7 +70,7 @@ sudo wget https://raw.githubusercontent.com/ros/rosdistro/master/rosdep/base.yam
 sudo vi base.yaml  #######    to look like this...
 
 ######
-hddtemp:
+"hddtemp:
   arch: [hddtemp]
   debian: [hddtemp]
   fedora: [hddtemp]
@@ -87,7 +87,7 @@ hddtemp:
     bionic: [hddtemp]
     focal: [hddtemp]
     impish: [hddtemp]
-    jammy: [hddtemp]
+    jammy: [hddtemp]"
 #####
 
 
