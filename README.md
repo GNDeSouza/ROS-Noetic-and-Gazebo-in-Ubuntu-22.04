@@ -16,9 +16,6 @@ sudo apt update
 sudo apt-get remove '.*gazebo.*' '.*sdformat.*' '.*ignition-math.*' '.*ignition-msgs.*' '.*ignition-transport.*' '.*ignition.*'
 sudo apt autoremove
 
-#### libignition-common3-graphics libtinyxml2-6a libignition-fuel-tools4 libjsoncpp1 libprotobuf17 libtinyxml2-6a libzip5 libignition-msgs5 libprotobuf
-17 libtinyxml2-6a libignition-transport8 libprotobuf17 libignition-transport8-log libprotobuf17 
-
 
 #### Install the dependencies for gazebo
 sudo sh -c 'echo "deb http://packages.osrfoundation.org/gazebo/ubuntu-stable `lsb_release -cs` main" > /etc/apt/sources.list.d/gazebo-stable.list'
@@ -28,8 +25,10 @@ sudo wget https://raw.githubusercontent.com/ignition-tooling/release-tools/maste
 
 
 #### Now, remove "ogre 2.1" from the list of $ogre in /tmp/dependencies.sh
+sudo vi /tmp/dependencies.sh
 
 
+#### Install the dependencies
 GAZEBO_MAJOR_VERSION=11  ROS_DISTRO=noetic . /tmp/dependencies.sh
 sudo echo $BASE_DEPENDENCIES $GAZEBO_BASE_DEPENDENCIES | tr -d '\\' | xargs sudo apt-get -y install
 
@@ -62,8 +61,6 @@ sudo wget https://raw.githubusercontent.com/ros/rosdistro/master/rosdep/base.yam
 sudo vi base.yaml  #######    to look like this...
 
 ######
-
-
 hddtemp:
   arch: [hddtemp]
   debian: [hddtemp]
@@ -82,8 +79,6 @@ hddtemp:
     focal: [hddtemp]
     impish: [hddtemp]
     jammy: [hddtemp]
-
-
 #####
 
 
@@ -93,14 +88,8 @@ sudo vi /etc/ros/rosdep/sources.list.d/20-default.list    #####   to look like t
 
 
 ######
-
-
-
 #yaml https://raw.githubusercontent.com/ros/rosdistro/master/rosdep/base.yaml
 yaml file:///etc/ros/rosdep/sources.list.d/base.yaml
-
-
-
 ######
 
 
@@ -118,7 +107,7 @@ cd ~/ros_catkin_ws/src
 sudo mkdir ~/Downloads/backup
 sudo mv rosconsole urdf ~/Downloads/backup/
 
-#### Download and use fix branch
+#### Download and use fixed branch
 sudo git clone https://github.com/dreuter/rosconsole.git
 cd rosconsole
 sudo git checkout noetic-jammy
@@ -131,4 +120,5 @@ sudo git checkout set-cxx-version
 cd ~/ros_catkin_ws
 #### Now, we compile it from source.  DO NOT use -j20 as it may overload your CPU
 sudo ./src/catkin/bin/catkin_make_isolated -j10 -l10 --install -DCMAKE_BUILD_TYPE=Release --install-space /opt/ros/noetic 
+
 
