@@ -70,6 +70,7 @@ sudo wget https://raw.githubusercontent.com/ros/rosdistro/master/rosdep/base.yam
 sudo vi base.yaml  #######    to look like this...
 
 
+
 ###### hddtemp:
 ######  arch: [hddtemp]  
 ######  debian: [hddtemp]
@@ -91,6 +92,7 @@ sudo vi base.yaml  #######    to look like this...
     
 
 
+####  Save it
 sudo mv base.yaml /etc/ros/rosdep/sources.list.d/
 
 sudo vi /etc/ros/rosdep/sources.list.d/20-default.list    #####   to look like this
