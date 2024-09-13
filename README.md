@@ -70,41 +70,25 @@ sudo wget https://raw.githubusercontent.com/ros/rosdistro/master/rosdep/base.yam
 sudo vi base.yaml  #######    to look like this...
 
 
-######hddtemp:
+###### hddtemp:
 ######  arch: [hddtemp]  
 ######  debian: [hddtemp]
-  
-  fedora: [hddtemp]
-  
-  freebsd: [python27]
-  
-  gentoo: [app-admin/hddtemp]
-  
-  macports: [python27]
-  
-  nixos: [hddtemp]
-  
-  openembedded: [hddtemp@meta-oe]
-  
-  opensuse: [hddtemp]
-  
-  rhel: [hddtemp]
-  
-  slackware: [hddtemp]
-  
-  ubuntu:
-  
-    '*': null
+######  fedora: [hddtemp]
+######  freebsd: [python27]
+######  gentoo: [app-admin/hddtemp]
+######  macports: [python27]  
+######  nixos: [hddtemp]  
+######  openembedded: [hddtemp@meta-oe]  
+######  opensuse: [hddtemp]  
+######  rhel: [hddtemp]  
+######  slackware: [hddtemp]  
+######  ubuntu: 
+######    '*': null   
+######    bionic: [hddtemp]    
+######    focal: [hddtemp]    
+######    impish: [hddtemp]    
+######    jammy: [hddtemp]"
     
-    bionic: [hddtemp]
-    
-    focal: [hddtemp]
-    
-    impish: [hddtemp]
-    
-    jammy: [hddtemp]"
-    
-#####
 
 
 sudo mv base.yaml /etc/ros/rosdep/sources.list.d/
