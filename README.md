@@ -109,7 +109,7 @@ yaml file:///etc/ros/rosdep/sources.list.d/base.yaml
 
 
 #### Download list of packages to install noetic-desktop-full
-sudo rosdep update
+rosdep update
 
 sudo mkdir ~/ros_catkin_ws
 
