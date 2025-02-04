@@ -22,7 +22,7 @@ sudo apt autoremove
 
 
 #### Install the dependencies for gazebo
-sudo sh -c 'echo "deb http://packages.osrfoundation.org/gazebo/ubuntu-stable '`'lsb_release -cs'`' main" > /etc/apt/sources.list.d/gazebo-stable.list'
+sudo sh -c 'echo "deb http://packages.osrfoundation.org/gazebo/ubuntu-stable \`lsb_release -cs\` main" > /etc/apt/sources.list.d/gazebo-stable.list'
 
 sudo wget https://packages.osrfoundation.org/gazebo.key -O - | sudo apt-key add -
 
