@@ -126,7 +126,7 @@ sudo rosdep install --from-paths ./src --ignore-packages-from-source --rosdistro
 #### Backup
 cd ~/ros_catkin_ws/src
 
-sudo mkdir ~/Downloads/backup
+mkdir ~/Downloads/backup
 
 sudo mv rosconsole urdf ~/Downloads/backup/
 
