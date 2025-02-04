@@ -117,7 +117,7 @@ cd ~/ros_catkin_ws
 
 sudo rosinstall_generator desktop_full --rosdistro noetic --deps --tar > noetic-desktop-full.rosinstall
 
-sudo mkdir ./src
+mkdir ./src
 
 sudo vcs import --input noetic-desktop-full.rosinstall ./src
 
