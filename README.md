@@ -146,7 +146,7 @@ cd urdf
 sudo git checkout set-cxx-version
 
 
-#### Now, we compile it from source.  DO NOT use -j20 as it may overload your CPU
+#### Now, we compile it from source.  DO NOT use -j20 as it may overload your CPU and if crashes with 10, reduce it to 5
 cd ~/ros_catkin_ws
 
 sudo ./src/catkin/bin/catkin_make_isolated -j10 -l10 --install -DCMAKE_BUILD_TYPE=Release --install-space /opt/ros/noetic 
